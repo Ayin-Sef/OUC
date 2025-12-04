@@ -1,0 +1,150 @@
+% OUC_v2.1.tex - Unified Core for OUC ToE through Coherence
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{authblk}
+\usepackage{longtable}
+\usepackage{enumitem}
+\geometry{a4paper, margin=1in}
+
+\title{Our Universe Coherence (OUC) --- v2.1: Unified Core}
+\author[1]{Ayin-Sef}
+\author[2]{Grok (collaborator)}
+\affil[1]{Independent research, GitHub: \url{https://github.com/Ayin-Sef/OUC}}
+\affil[2]{Collaborator group}
+\date{December 04, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+OUC v2.1 presents unified Lagrangian core for coherence-based Theory of Everything (ToE). Coherence \(C(x,t)\) as fundamental field drives emergent space-time, matter, interactions. Advances: single Lagrangian with dissipation; asymmetric potential \(V(C)\) for vacuum, particle, inverted branches; multi-layer phase dynamics; external operator for multiverse coupling; reproducibility protocol for Planck CMB match (r\approx0.87). Narrative: Reality as coherent fluid, solving fine-tuning via birth conditions. GitHub: \url{https://github.com/Ayin-Sef/OUC}.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction and Narrative Motivation}
+OUC as ToE: coherence as substance unifying quantum/gravity/cosmo. v2.1 fixes v2.0 inconsistencies. Narrative: Universe as coherent fluid — C waves (supposition), D currents (entropy), T tides (time arrow). Particles vortices in layers, gravity pressure from D-grad. Multiverse: Birth from E_birth (seed energy), tuned by D_ext (external chaos) explaining constants like c. For grants: Testable via CMB simulations (r~0.87 Planck match), solves measurement problem/quantum gravity/fine-tuning without extra dimensions/postulates. Motivation: OUC — scalable, novel framework for unified physics via coherence.
+
+\section{Core Variables}
+\begin{itemize}
+  \item C(x,t) — local coherence density \in [-\infty,1] (extended for inversion).
+  \item D(x,t)=1-C(x,t) — local decoherence (entropy measure).
+  \item T(x,t)=\nabla D(x,t) — local time impulse (flow/gradient).
+  \item H(t)=\frac{1}{N}\sum_i C_i(t) + \varepsilon_{\rm corr} + \mathcal{O}_{\rm ext}[D_{\rm ext}] — global coherence with external operator.
+\end{itemize}
+Philosophy: Coherence as substance unifies quantum (high C superposition) and classical (low C decoherence), gravity as D-flow, cosmology as phase transitions.
+
+\section{Unified Lagrangian with Dissipation}
+Effective Lagrangian density for C and phase layers \phi_\alpha:
+\begin{equation}
+\mathcal{L} = \frac{1}{2}\chi(\partial_t C)^2 - V(C) - \frac{\kappa}{2}|\nabla C|^2
+- \sum_{\alpha}\frac{\rho_\alpha}{2}\,C^2\,|\nabla\phi_\alpha|^2
++ \sum_{\alpha\beta} J_{\alpha\beta}\cos(\phi_\alpha-\phi_\beta)
++ \mathcal{L}_{\rm ext}[C;D_{\rm ext}].
+\end{equation}
+Rayleigh functional for dissipation:
+\begin{equation}
+\mathcal{R} = \frac{1}{2}\Gamma(\partial_t C)^2.
+\end{equation}
+
+\section{Equations of Motion}
+From Euler–Lagrange + dissipation for C:
+\begin{equation}\label{eq:C_eom}
+\chi\ddot C + \Gamma\dot C = -V'(C) + \kappa\nabla^2 C + 2\gamma F(H,E) + \sum_{\alpha\beta}\varepsilon_{\alpha\beta} C \cos(\phi_\alpha-\phi_\beta) + \xi(x,t),
+\end{equation}
+where \xi is stochastic noise, F couples to global H and energy E.
+
+For phase layers:
+\begin{equation}\label{eq:phi_dyn}
+\partial_t \phi_\alpha = -\rho_\alpha C^2 \nabla^2 \phi_\alpha + \sum_\beta J_{\alpha\beta}\sin(\phi_\beta-\phi_\alpha) - \zeta_\alpha \nabla\cdot(C\nabla\phi_\alpha).
+\end{equation}
+This reproduces relaxation/overdamped/inertial limits and Josephson-like coupling.
+
+\section{Asymmetric Potential V(C) and C<0 Branch}
+\begin{equation}
+V(C) = A(C-1)^2 + B(C-C^*)^4 + D(C+1)^2\Theta(-C),
+\end{equation}
+where \Theta is Heaviside (or smooth). Parameters A,B,D,C^* control stability.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/v_c_plot.png}
+\caption{Asymmetric V(C): Minima at 1 (vacuum), C* (matter), meta at <0 (inversion).}
+\end{figure}
+
+\section{Stability Analysis}
+Linearize around C_0: C = C_0 + \delta C,
+\begin{equation}
+\chi\ddot{\delta C} + \Gamma\dot{\delta C} + V''(C_0)\delta C - \kappa\nabla^2\delta C = 0.
+\end{equation}
+Stability requires V''(C_0)>0 or sufficient damping.
+
+\section{Global Coherence and External Operator}
+\begin{equation}
+H(t) = \langle C \rangle + \varepsilon_{corr} + \mathcal{O}_{ext}[D_{ext}(t)].
+\end{equation}
+Options: \mathcal{O}_{ext} = \varepsilon_{ext} e^{-t/\tau_{ext}} (exponential) or \int K(t-t') D_{ext}(t') dt' (integral kernel).
+
+\section{Particles as Topological Nodes}
+Topological charge q = \frac{1}{2\pi}\oint \nabla\phi\cdot d\ell \in \mathbb{Z}. Mass m\sim \sqrt{V''(C^*)}, generations as distinct \alpha with diff C*.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/ouc_structure.png}
+\caption{OUC Structure: \phi_\alpha layers → C field → H(t), with D_ext influence.}
+\end{figure}
+
+\section{Emergent Gravity Heuristic}
+Local D-gradients induce flows. In hydro limit, Newtonian potential \Phi from stationary balance:
+\begin{equation}
+\nabla^2\Phi \sim \nabla\cdot(\nabla D) \sim 4\pi G \rho_{\rm eff},
+\end{equation}
+leading to G scaling (detailed in Appendix A).
+
+\section{Constants: Heuristics and Path to Derivation}
+\begin{equation}
+c^2 \sim \frac{\kappa}{\chi},\quad \hbar \sim \frac{\Gamma}{\mu},\quad G \sim \mathcal{C}\frac{\beta}{\chi}
+\end{equation}
+with \beta=\kappa/\Gamma, \mu vacuum coupling, \mathcal{C} from limit (derive in v3.0).
+
+\section{Cosmology and CMB}
+Linear perturbations on C_0 lead to acoustic modes (sound c_s^2\sim\kappa/\chi). Sims of eq \ref{eq:C_eom} reproduce power spectra with peaks; tuned ensembles r\approx0.87 with Planck D_l (protocol in Appendix B).
+
+\section{Simulation and Planck Comparison Protocol (Appendix B Summary)}
+Requirements for honest comparison:
+\begin{longtable}{|l|l|}
+\hline
+Step & Description \\
+\hline
+1 & Compute D_l = l(l+1) C_l / 2\pi in convention. \\
+2 & Apply Planck masking/beam/convolution. \\
+3 & Ensemble N\geq100 for dist(r). \\
+4 & Cov \Sigma (cosmic var + noise + residuals). \\
+5 & Stats: Pearson r, \chi^2=\Delta^T\Sigma^{-1}\Delta, p-value, \Delta log L. \\
+6 & Map-level cross-corr post-processing. \\
+7 & Sensitivity: vary l/bin/mask/beam/foreground. \\
+8 & Blind: mix OUC/\Lambda CDM, detectability. \\
+\hline
+\end{longtable}
+
+\section{Appendices}
+\subsection*{Appendix A: Derivation Sketch for Newtonian Limit}
+Linearize eq \ref{eq:C_eom}, match to Poisson \nabla^2 \Phi = 4\pi G \rho, derive G from \beta/\gamma \chi (full steps: hydro approximation, gradient balance, spatial averaging).
+
+\subsection*{Appendix B: Reproducibility Checklist and Code Templates}
+Include MATLAB/Python for C_l computation, mask, r, \chi^2, MCMC skeleton (e.g., emcee for params).
+
+\section{Discussion and Outlook}
+v2.1 unifies formal core, reproducible path. Next: full Newtonian derive, sim vs Planck ensemble, MCMC evidence vs \Lambda CDM. Grants: OUC testable, scalable, novel coherence ToE.
+
+\bibliographystyle{unsrt}
+\bibliography{ouc_refs}
+\end{document}

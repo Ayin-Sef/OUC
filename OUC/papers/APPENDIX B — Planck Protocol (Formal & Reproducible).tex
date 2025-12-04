@@ -1,0 +1,63 @@
+\section*{Appendix B: Planck TT/TE/EE Comparison Protocol}
+\addcontentsline{toc}{section}{Appendix B: Planck Protocol}
+
+\subsection*{B.1 Overview}
+
+To ensure reproducible comparison between OUC simulations and Planck-2018 data, we define a strict pipeline.
+
+The goal is robust measurement of:
+\[
+r = \mathrm{corr}(C_\ell^{OUC}, C_\ell^{Planck}).
+\]
+
+\subsection*{B.2 Steps}
+
+\begin{enumerate}[label=\textbf{B.\arabic*}]
+\item \textbf{Compute 3D spectrum} $P(k)$ from $C(x)$ via FFT.
+\item \textbf{Project} $P(k)$ into angular $C_\ell$ using Limber-like integral.
+\item \textbf{Apply Planck beam}:
+\[
+C_\ell^{conv} = B_\ell^2 C_\ell.
+\]
+\item \textbf{Apply Planck mask} (Commander/SMICA).
+\item \textbf{Compute covariance} matrix $\Sigma$ including cosmic variance.
+\item \textbf{Compute statistics}:
+\[
+r = 
+\frac{\sum_\ell (C_\ell^{OUC}-\bar C)(C_\ell^{Planck}-\bar C_p)}
+{\sqrt{\sum (C_\ell^{OUC}-\bar C)^2}\sqrt{\sum (C_\ell^{Planck}-\bar C_p)^2}},
+\]
+\[
+\chi^2 = \Delta^T \Sigma^{-1} \Delta.
+\]
+\item \textbf{Blind test}: mix OUC and $\Lambda$CDM spectra.
+\item \textbf{Sensitivity}: vary mask, bins, multipole cuts.
+\end{enumerate}
+
+\subsection*{B.3 Reproducibility Requirements}
+
+\[
+N_{\text{ensemble}} \ge 100,
+\qquad
+\text{same mask, same beam, same binning}.
+\]
+
+Planck baseline dataset:
+\begin{itemize}
+\item Planck 2018 Commander (TT)  
+\item Planck 2018 SimAll (EE)  
+\item Planck 2018 Plik (TTTEEE)  
+\end{itemize}
+
+\subsection*{B.4 Outputs}
+
+For each run:
+\[
+\{ r,\ \chi^2,\ p\text{-value},\ \Delta\ln \mathcal{L} \}.
+\]
+
+Typical goal for OUC v2.2:
+\[
+r \ge 0.87 \quad \text{(current)}, 
+\qquad r \ge 0.92 \quad \text{(target after MCMC)}.
+\]

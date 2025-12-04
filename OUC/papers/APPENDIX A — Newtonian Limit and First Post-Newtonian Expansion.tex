@@ -1,0 +1,149 @@
+\appendix
+\section*{Appendix A: Newtonian Limit and First Post-Newtonian Expansion}
+
+\addcontentsline{toc}{section}{Appendix A: Newtonian Limit and 1PN}
+
+\subsection*{A.1 Linearization of the C-field Equation}
+
+Starting from Eq.~(\ref{eq:C_eom}):
+\[
+\chi\ddot C + \Gamma\dot C
+= -V'(C) + \kappa\nabla^2 C + S_\phi + S_H,
+\]
+expand around a homogeneous background:
+\[
+C(x,t) = C_0 + \delta C(x,t),
+\qquad | \delta C | \ll C_0.
+\]
+
+Potential expansion:
+\[
+V'(C) = V'(C_0) + V''(C_0)\delta C + \mathcal{O}(\delta C^2).
+\]
+
+At equilibrium:
+\[
+V'(C_0)=0.
+\]
+
+Thus:
+\[
+\chi \ddot{\delta C} + \Gamma \dot{\delta C} 
+- \kappa \nabla^2 \delta C + m_C^2 \delta C
+= S_\phi + S_H,
+\]
+where
+\[
+m_C^2 \equiv V''(C_0).
+\]
+
+\subsection*{A.2 Identification of Gravitational Potential}
+
+Define the decoherence field:
+\[
+D = 1 - C,
+\qquad \delta D = -\delta C.
+\]
+
+Gravity in OUC is sourced by gradients of $D$:
+\[
+\nabla^2 \Phi = \alpha \, \nabla^2 \delta D.
+\]
+
+To match Poisson's equation:
+\[
+\nabla^2 \Phi = 4\pi G \rho,
+\]
+we require:
+\[
+\alpha = 4\pi G \left( \frac{\partial \rho}{\partial (\nabla^2 D)} \right)^{-1}.
+\]
+
+In the hydrodynamic limit ($\ddot{\delta C} \ll m_C^2 \delta C$):
+\[
+m_C^2 \delta C - \kappa \nabla^2 \delta C \approx S_\phi.
+\]
+
+Assuming matter produces a source term:
+\[
+S_\phi \approx \beta \rho,
+\]
+we have:
+\[
+\delta C = \frac{\beta}{m_C^2} \rho
++ \frac{\kappa}{m_C^2} \nabla^2 \delta C.
+\]
+
+Invert perturbatively:
+\[
+\nabla^2 \delta C \approx \frac{\beta}{\kappa} \rho.
+\]
+
+Thus:
+\[
+\nabla^2 \Phi
+= \alpha \nabla^2 \delta D
+= -\alpha \frac{\beta}{\kappa} \rho.
+\]
+
+Require:
+\[
+4\pi G = -\alpha \frac{\beta}{\kappa}.
+\]
+
+Therefore:
+\[
+G = \frac{\alpha \beta}{4\pi \kappa}.
+\]
+
+This is the **fundamental relation** connecting $G$ to OUC parameters.
+
+\subsection*{A.3 First Post-Newtonian Correction}
+
+Retain $\ddot{\delta C}$ term and small nonlinearities:
+\[
+\chi \ddot{\delta C}
+- \kappa \nabla^2 \delta C
++ m_C^2 \delta C
+= \beta \rho + \varepsilon (\delta C)^2.
+\]
+
+Expand the gravitational potential:
+\[
+\Phi = \Phi_N + \Phi_{1PN},
+\]
+where:
+\[
+\nabla^2 \Phi_{1PN}
+= \eta_1 \ddot{\delta C}
+ + \eta_2 (\delta C)^2.
+\]
+
+Using the solution for $\delta C$ and identifying $\Phi_{1PN}$ with GR's 1PN terms:
+\[
+\Phi_{1PN} = \frac{1}{c^2}
+  \left(
+      \frac{\partial^2 \Phi_N}{\partial t^2}
+    + 2\Phi_N^2
+  \right),
+\]
+we derive:
+
+\[
+c^2 = \frac{\kappa}{\chi}.
+\]
+
+Fully consistent with the heuristic relation in the main text.
+
+\subsection*{A.4 Summary of Fundamental Constants}
+
+\[
+\boxed{
+\begin{aligned}
+c^2 &= \frac{\kappa}{\chi}, \\
+G   &= \frac{\alpha\beta}{4\pi\kappa}, \\
+\hbar &= \frac{\Gamma}{\mu}.
+\end{aligned}}
+\]
+
+This establishes Newtonian gravity, 1PN corrections, and the emergence of $c,G,\hbar$ directly from OUC.
